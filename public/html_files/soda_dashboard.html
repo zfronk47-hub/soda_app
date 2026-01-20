@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coca-Cola Dashboard</title>
+  <link rel="stylesheet" href="/css_files/soda_dashboard_stylesheet.css">
+</head>
+<body>
+
+  <h1 class="dash-title" style="text-transform: uppercase; margin-bottom: 0px;">Coca-Cola Flavours</h1>
+
+  <div class="flavour-grid">
+    <div class="flavour-card">
+      <img src="/images/coca_cola_original.jpeg" alt="Coca-Cola Original">
+      <p>Coca-Cola Original</p>
+    </div>
+
+      <div class="flavour-card">
+      <img src="/images/coca_cola_zero_sugar.jpeg" alt="Coca-Cola Zero">
+      <p>Coca-Cola Zero Sugar</p>
+    </div>
+
+    <div class="flavour-card">
+      <img src="/images/coca_cola_cherry.jpg" alt="Coca-Cola Cherry">
+      <p>Coca-Cola Cherry</p>
+    </div>
+  </div>
+
+  <div class="order-form-container">
+    <h2>Place Your Order</h2>
+
+    <form id="orderForm" method="POST" action="/order">
+      <input type="email" name="email" placeholder="Your Email" id="email" required>
+      <input type="text" name="location" placeholder="Location in Nairobi" id="location" required>
+      <input type="tel" name="phone" placeholder="Telephone Number" id="phone" required>
+
+      <select name="flavour" id="flavour" required>
+        <option value="">Select Flavour</option>
+        <option value="Coca-Cola Original">Coca-Cola Original</option>
+        <option value="Coca-Cola Zero Sugar">Coca-Cola Zero Sugar</option>
+        <option value="Coca-Cola Cherry">Coca-Cola Cherry</option>
+      </select>
+
+    <!-- Quantity input -->
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" id="quantity" min="1" value="1" required>
+
+    <button type="submit">Submit Order</button>
+  </form>
+</div>
+
+  <script src="../js_files/soda_dashboard_script.js"></script>
+</body>
+</html>

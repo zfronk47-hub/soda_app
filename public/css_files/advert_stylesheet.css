@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #111 30%, #000);
+  color: #ffffff;
+  height: 100vh;
+}
+
+/* Main ad layout */
+.ad-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  height: 100%;
+}
+
+/* Text section */
+.ad-text {
+  max-width: 520px;
+}
+
+.ad-text h1 {
+  font-size: 64px;
+  color: #ff003c;
+  letter-spacing: 2px;
+}
+
+.ad-text h2 {
+  font-size: 28px;
+  margin: 10px 0 20px;
+  font-weight: normal;
+}
+
+.ad-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #00ffcc;
+  margin-bottom: 30px;
+}
+
+/* Button */
+#ctaBtn {
+  background: #ff003c;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#ctaBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff003c;
+}
+
+/* Image section */
+.ad-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-image img {
+  max-width: 420px;
+  transform: rotate(-6deg);
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.7));
+}
+
+/* Responsive tweak */
+@media (max-width: 900px) {
+  .ad-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ad-image img {
+    margin-top: 40px;
+    transform: rotate(0);
+  }
+}

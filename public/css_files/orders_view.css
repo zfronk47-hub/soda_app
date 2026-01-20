@@ -1,0 +1,103 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page base */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #111 30%, #000);
+  color: #f1f1f1;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Title */
+.page-title {
+  text-align: center;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: #ff003c;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* Table wrapper feel */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0d0d0d;
+  border: 1px solid #222;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Table head */
+.orders-table thead {
+  background: linear-gradient(90deg, #ff003c, #b8002b);
+}
+
+.orders-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  border-bottom: 1px solid #222;
+}
+
+/* Table body */
+.orders-table td {
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #ddd;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+/* Zebra striping */
+.orders-table tbody tr:nth-child(even) {
+  background: #121212;
+}
+
+/* Hover effect */
+.orders-table tbody tr:hover {
+  background: rgba(255, 0, 60, 0.08);
+  transition: background 0.15s ease;
+}
+
+/* Emphasis tweaks */
+.orders-table td:nth-child(1) {
+  color: #00ffcc; /* email */
+  font-weight: 500;
+}
+
+.orders-table td:nth-child(4) {
+  color: #ff6b6b; /* flavour */
+}
+
+.orders-table td:nth-child(5) {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Mobile handling */
+@media (max-width: 900px) {
+  body {
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .orders-table {
+    font-size: 13px;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 10px;
+  }
+}
